@@ -1,0 +1,28 @@
+html {
+    height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  .star-rating {
+    display: flex;
+  }
+  
+  .star-rating input[type='radio'] {
+    display: none;
+  }
+  
+  .star-rating label {
+    font-size: 1.5em;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .star-rating label:hover,
+  .star-rating input[type='radio']:checked ~ label {
+    color: #ffc107;
+  }
+  
