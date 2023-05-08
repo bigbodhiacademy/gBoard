@@ -502,41 +502,5 @@ function getAllTimeLeaderboardData($offset = 0, $limit = 10) {
   return $stmt->get_result();
 }
 
-function authenticateUser($username, $password) {
-  global $conn;
-  $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-  $stmt->bind_param("s", $username);
-  $stmt->execute();
-  $result = $stmt->get_result();
-  $user = $result->fetch_assoc();
-
-  if ($user && password_verify($password, $user['password'])) {
-      return $user;
-  }
-
-  return false;
-}
-
-function createUser($username, $email, $password) {
-  global $conn;
-  $stmt = $conn->prepare("INSERT INTO users (username, email, password, user_role) VALUES (?, ?, ?, 'user')");
-  $stmt->bind_param("sss", $username, $email, $password);
-  $stmt->execute();
-}
-
-function createSuperUser($username, $email, $password, $user_role = 'user') {
-  global $conn;
-
-  $stmt = $conn->prepare("INSERT INTO users (username, email, password, user_role) VALUES (?, ?, ?, ?)");
-  $stmt->bind_param("ssss", $username, $email, $password, $user_role);
-
-  if ($stmt->execute()) {
-      return true;
-  } else {
-      return false;
-  }
-}
-
-
 
 ?>

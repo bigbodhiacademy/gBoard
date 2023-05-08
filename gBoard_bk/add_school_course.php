@@ -1,8 +1,7 @@
 <?php
 include 'functions.php';
-//include 'header.php';
+include 'header.php';
 ?>
-<?php include 'header_restricted.php'; ?>
 
 
 <div class="container">

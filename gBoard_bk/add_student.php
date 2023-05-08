@@ -1,7 +1,6 @@
 <?php require_once 'functions.php'; ?>
 
-<?php include 'header_restricted.php'; ?>
-
+<?php include 'header.php'; ?>
 
 
 <div class="container mt-5">

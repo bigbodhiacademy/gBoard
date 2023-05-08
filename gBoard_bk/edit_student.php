@@ -1,7 +1,6 @@
 <?php require_once 'functions.php'; ?>
 
-<?php include 'header_restricted.php'; ?>
-
+<?php include 'header.php'; ?>
 
 <?php
 $student_id = isset($_GET['id']) ? $_GET['id'] : null;

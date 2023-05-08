@@ -1,4 +1,4 @@
-<?php include 'header_restricted.php'; ?>
+<?php require_once("header.php"); ?>
 <?php require_once("functions.php"); ?>
 
 <div class="container">
