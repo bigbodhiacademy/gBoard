@@ -1,8 +1,8 @@
 <?php
 require_once 'functions.php';
-$username = 'sam';
-$email = 'svd2305@gmail.com.com';
-$password = password_hash('hotsummer', PASSWORD_DEFAULT);//hotsummer
+$username = 'root';
+$email = 'root@localhost';
+$password = password_hash('password', PASSWORD_DEFAULT);
 $user_role = 'super_user';
 
 createSuperUser($username, $email, $password, $user_role);
